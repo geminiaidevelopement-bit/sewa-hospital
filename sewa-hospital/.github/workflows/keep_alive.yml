@@ -1,0 +1,15 @@
+name: Keep Server Alive
+
+on:
+  schedule:
+    # Runs every 5 minutes to prevent Render free tier sleeping
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping-server:
+    runs-runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Web Service
+        run: |
+          curl -s -f https://sewa-hospital-beed.onrender.com || echo "Server ping failed or starting up"
