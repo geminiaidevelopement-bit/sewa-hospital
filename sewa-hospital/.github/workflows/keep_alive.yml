@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Ping Render Web Service
         run: |
-          curl -s -f https://sewa-hospital-beed.onrender.com || echo "Server ping failed or starting up"
+          curl -s -f https://sewa-hospital.onrender.com || echo "Server ping failed or starting up"
